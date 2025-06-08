@@ -1,0 +1,9 @@
+*.exe
+*.zip
+*.tar
+*.mp4
+*.ico
+Assets/*
+node_modules/*
+android/*
+ios/*

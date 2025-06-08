@@ -1,0 +1,35 @@
+name: Mobile App CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Expo CLI globally
+        run: npm install -g expo-cli
+
+      - name: Check environment with expo doctor
+        run: npx expo doctor
+
+      - name: Run Expo Prebuild
+        run: npx expo prebuild --non-interactive
+
+      - name: Run tests (adjust if needed)
+        run: npm test

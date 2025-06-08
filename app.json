@@ -4,7 +4,7 @@
     "slug": "optifyx-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon.jpg",
     "userInterfaceStyle": "light",
     "plugins": [
       "expo-barcode-scanner"
@@ -28,12 +28,18 @@
       "edgeToEdgeEnabled": true,
       "permissions": [
         "CAMERA",
-        "RECORD_AUDIO"
+        "RECORD_AUDIO",
+        "android.permission.CAMERA"
       ],
-      "package": "com.anonymous.optifyxapp"
+      "package": "com.theushen.optifyxapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "eee0cba9-bac3-451b-b191-0b3626817aa6"
+      }
     }
   }
 }
