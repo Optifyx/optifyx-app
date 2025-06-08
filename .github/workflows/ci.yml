@@ -29,7 +29,7 @@ jobs:
         run: yarn global add expo-cli
 
       - name: Check environment with expo doctor
-        run: npx expo doctor
+        run: npx expo-doctor
 
       - name: Run Expo Prebuild
         run: npx expo prebuild --non-interactive
