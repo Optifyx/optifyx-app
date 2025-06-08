@@ -19,11 +19,14 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install Yarn
+        run: npm install -g yarn
+
       - name: Install dependencies
-        run: npm install
+        run: yarn
 
       - name: Install Expo CLI globally
-        run: npm install -g expo-cli
+        run: yarn global add expo-cli
 
       - name: Check environment with expo doctor
         run: npx expo doctor
@@ -31,5 +34,5 @@ jobs:
       - name: Run Expo Prebuild
         run: npx expo prebuild --non-interactive
 
-      - name: Run tests (adjust if needed)
+      - name: Run tests
         run: npm test
